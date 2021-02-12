@@ -35,12 +35,9 @@ async def is_register_admin(chat, user):
 
 
 PM_START_TEXT = (
-    "[Julia](https://telegra.ph/MissJulieRobot-10-24)"
-    + " "
-    + "**"
-    + "V"
-    + BOT_VERSION
-    + "**"
+Hey There My Name Is HITOMI!
+I Am An Anime Themed Peru Group Management Bot!
+I Hope I Can Manage Your Groups Efficiently!
 )
 
 
@@ -65,22 +62,14 @@ async def start(event):
             buttons=[
                 [
                     Button.url(
-                        "Add To Group  👥", "t.me/MissJuliaRobot?startgroup=true"
+                        "Add me to your groups", "t.me/Hitomi_Robot?startgroup=true"
                     ),
                     Button.url(
-                        "Support Group 🎙️", "https://t.me/MissJuliaRobotSupport"
+                        "Support Group", "https://t.me/Hitomi_Support"
                     ),
                 ],
                 [
-                    Button.inline("Commands ❓", data="help_menu"),
-                    Button.url(
-                        "Source 📀", "https://github.com/MissJuliaRobot/MissJuliaRobot"
-                    ),
-                ],
-                [
-                    Button.url("Channel 🗞️", url="https://t.me/MissJuliaRobotNews/2"),
-                    Button.url("Webiste 🌐", "missjuliarobot.unaux.com"),
-                    Button.url("Donate 💲", "https://ko-fi.com/missjuliarobot"),
+                    Button.inline("Help", data="help_menu"),
                 ],
                 [Button.inline("Close Menu 🔒", data="start_again")],
             ],
@@ -108,28 +97,20 @@ async def reopen_again(event):
             buttons=[
                 [
                     Button.url(
-                        "Add To Group  👥", "t.me/MissJuliaRobot?startgroup=true"
+                        "Add Me To Your Group", "t.me/Hitomi_Robot?startgroup=true"
                     ),
                     Button.url(
-                        "Support Group 🎙️", "https://t.me/MissJuliaRobotSupport"
+                        "Support Group", "https://t.me/Hitomi_Support"
                     ),
                 ],
                 [
-                    Button.inline("Commands ❓", data="help_menu"),
-                    Button.url(
-                        "Source 📀", "https://github.com/MissJuliaRobot/MissJuliaRobot"
-                    ),
+                    Button.inline("Help", data="help_menu"),
                 ],
-                [
-                    Button.url("Channel 🗞️", url="https://t.me/MissJuliaRobotNews/2"),
-                    Button.url("Webiste 🌐", "missjuliarobot.unaux.com"),
-                    Button.url("Donate 💲", "https://ko-fi.com/missjuliarobot"),
-                ],
-                [Button.inline("Close Menu 🔒", data="start_again")],
+                [Button.inline("Close Menu", data="start_again")],
             ],
         )
     else:
-        await event.reply("I am Alive ^_^")
+        await event.reply("Heya!I am awake😁")
 
 
 @register(pattern="^/help$")
@@ -151,7 +132,7 @@ async def help(event):
     else:
         await event.reply(
             "Contact me in PM to get the help menu",
-            buttons=[[Button.url("Help ❓", "t.me/MissJuliaRobot?start=help")]],
+            buttons=[[Button.url("Help", "t.me/Hitomi_robot?start=help")]],
         )
 
 
@@ -174,7 +155,7 @@ async def help(event):
     else:
         await event.reply(
             "Contact me in PM to get the help menu",
-            buttons=[[Button.url("Help ❓", "t.me/MissJuliaRobot?start=help")]],
+            buttons=[[Button.url("Help", "t.me/Hitomi_robot?start=help")]],
         )
 
 
@@ -202,7 +183,7 @@ async def on_plug_in_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     plugin_name = event.data_match.group(1).decode("UTF-8")
     help_string = ""
-    # By @MissJuliaBeta_Robot
+    # By 
 
     for i in CMD_LIST[plugin_name]:
         plugin = plugin_name.replace("_", " ")
